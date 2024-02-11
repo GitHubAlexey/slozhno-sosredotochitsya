@@ -5,8 +5,42 @@
 */
 
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+	--section-text-color: #353430;
+	--section-title-color: #353430;
+	--subtitle-color: #353430;
+	--subtitle-bg-color: #FF8DCB;
+	--menu-color: #353430;
+	--menu-hover-color: rgb(50 49 45 / 0.4);
+	--decor-color: #353430;
+	--decorative-element-color: #FFF1F7;
+	--title-color: #FFC2E6;
+	--text-shadow-color: #FF8DCB;
+	--main-font: 'IBM Plex mono';
+	--font-weight: 400;
+	--bg-image: url(../images/cover-image-light.png);
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--section-text-color: #353430;
+		--section-title-color: #353430;
+		--subtitle-color: #353430;
+		--subtitle-bg-color: #FF8DCB;
+		--menu-color: #353430;
+		--menu-hover-color: rgb(50 49 45 / 0.4);
+		--decor-color: #353430;
+		--decorative-element-color: #FFF1F7;
+		--title-color: #FFC2E6;
+		--text-shadow-color: #FF8DCB;
+		--main-font: 'IBM Plex mono';
+		--font-weight: 400;
+		--bg-image: url(../images/cover-image-light.png);
+	}
+}
+
+@media (width < 768px) {
+	.header__title {
+		--text-shadow-color: #FF0070;
+		text-shadow: 4px 4px 0 var(--text-shadow-color, #FF0070);
+	}
 }
