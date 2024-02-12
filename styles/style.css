@@ -19,7 +19,7 @@ a:focus {
 }
 
 a:focus-visible {
-	border-bottom: 1px solid currentColor;
+	border: 1px solid currentColor;
 }
 
 .page {
@@ -40,7 +40,8 @@ a:focus-visible {
 	padding: 10px;
 	font-size: 18px;
 	text-align: center;
-	min-block-size: 100vh;
+	min-block-size: 668px;
+	block-size: 100vh;
 }
 
 @media (width >=768px) {
@@ -92,6 +93,7 @@ a:focus-visible {
 	gap: 10px;
 	color: var(--decorative-element-color, #FF0070);
 	line-height: 138.89%;
+	text-transform: uppercase;
 }
 
 @media (width >=768px) {
@@ -117,19 +119,13 @@ a:focus-visible {
 
 .header__theme-menu {
 	justify-self: end;
-	margin: 65px 0 66px 0;
-}
-
-@media (width >=768px) {
-	.header__theme-menu {
-		margin: 172px 0 173px 0;
-	}
+	align-self: center;
 }
 
 @media (width >=1024px) {
 	.header__theme-menu {
 		justify-self: center;
-		margin: 0 0 274px 0;
+		align-self: start;
 	}
 }
 
@@ -161,31 +157,26 @@ a:focus-visible {
 	border: 1px solid var(--menu-color, #FF0070);
 }
 
-.title {
-	color: var(--title-color, #DB00FF);
+.logo {
+	color: var(--logo-color, #DB00FF);
 	font-weight: 700;
-	font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+	font-size: var(--logo-size, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
 	line-height: 82.5%;
 }
 
-@media (width >=1024px) {
-	.title {
-		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-	}
-}
-
-.header__title {
+.header__logo {
 	text-align: start;
 	text-shadow: 4px 4px 0 var(--text-shadow-color, #FF0070);
 }
 
 @media (width >=768px) {
-	.header__title {
+	.header__logo {
 		margin-inline-start: -20px;
 	}
 }
 
 .header__text {
+	justify-self: center;
 	align-self: center;
 }
 
@@ -255,6 +246,10 @@ a:focus-visible {
 .reasons__list {
 	display: grid;
 	gap: 20px;
+}
+
+.section__item-article .section__text:not(:last-child) {
+	margin-block-end: 10px;
 }
 
 .section__subtitle {
@@ -374,9 +369,9 @@ a:focus-visible {
 
 .image {
 	display: block;
+	object-fit: cover;
 	inline-size: 100%;
 	block-size: 100%;
-	object-fit: cover;
 }
 
 @media (width >=768px) {
@@ -407,24 +402,14 @@ a:focus-visible {
 
 .footer {
 	position: relative;
+	display: grid;
 	padding: 10px;
-	min-block-size: 100vh;
+	block-size: 100vh;
+	min-block-size: 668px;
 }
 
-.footer__title {
-	padding: 276px 0 275px;
-	text-align: center;
+.footer__logo {
+	justify-self: center;
+	align-self: center;
 	text-shadow: 2px 2px 0 var(--text-shadow-color, #FF0070);
-}
-
-@media (width >=768px) {
-	.footer__title {
-		padding: 453px 0 452px;
-	}
-}
-
-@media (width >=1024px) {
-	.footer__title {
-		padding: 309px 0 309px;
-	}
 }

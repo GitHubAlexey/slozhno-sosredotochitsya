@@ -13,7 +13,8 @@
 	--menu-hover-color: rgb(50 49 45 / 0.4);
 	--decor-color: #353430;
 	--decorative-element-color: #FFF1F7;
-	--title-color: #FFC2E6;
+	--logo-color: #FFC2E6;
+	--logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 	--text-shadow-color: #FF8DCB;
 	--main-font: 'IBM Plex mono';
 	--font-weight: 400;
@@ -30,7 +31,8 @@
 		--menu-hover-color: rgb(50 49 45 / 0.4);
 		--decor-color: #353430;
 		--decorative-element-color: #FFF1F7;
-		--title-color: #FFC2E6;
+		--logo-color: #FFC2E6;
+		--logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 		--text-shadow-color: #FF8DCB;
 		--main-font: 'IBM Plex mono';
 		--font-weight: 400;
@@ -39,7 +41,7 @@
 }
 
 @media (width < 768px) {
-	.header__title {
+	.header__logo {
 		--text-shadow-color: #FF0070;
 		text-shadow: 4px 4px 0 var(--text-shadow-color, #FF0070);
 	}
